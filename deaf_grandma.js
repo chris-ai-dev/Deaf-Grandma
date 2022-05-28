@@ -2,14 +2,29 @@ function deafGrandma() {
 // const prompt = require("prompt-sync")();
 // var input = prompt("HEY KID!\n");
 // console.log(input)
-// if(input === input.toLowerCase) {
-//     console.log("SPEAK UP, KID!");
-// } else if(input === input.toUpperCase ) {
-//     console.log("NO, NOT SINCE 1946!");
-// }
-  const name = window.prompt('what is your name?');
-  document.write("My name is " + name)
 
+
+let count = 1;
+let input = window.prompt('HEY KID!');
+while(count < 2) {
+
+  // if(count ===2) {
+  //   alert("LATER, SKATER!");
+  // }
+  if(input ==="GOODBYE!") {
+    input = window.prompt("LEAVING SO SOON?");
+    count++;
+    alert("LATER, SKATER!");
+    break;
+  }
+  if(input === "") {
+    input = window.prompt("WHAT?!");
+  }else if(input !== input.toUpperCase()) {
+    input = window.prompt("SPEAK UP, KID!");
+  }else if(input === input.toUpperCase() && input !== "GOODBYE!" ) {
+    input = window.prompt("NO, NOT SINCE 1946!");
+  }
+}
     
 }
 
